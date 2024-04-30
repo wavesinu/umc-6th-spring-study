@@ -33,7 +33,7 @@ public enum SuccessStatus implements BaseCode {
     }
 
     @Override
-    public ReasonDTO getReasonHttpMethod() {
+    public ReasonDTO getReasonHttpStatus() {
         return ReasonDTO.builder()
                 .message(message)
                 .code(code)
