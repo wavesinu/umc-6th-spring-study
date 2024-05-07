@@ -26,7 +26,7 @@ public class ApiResponse<T> {
     }
 
     public static <T> ApiResponse<T> of(BaseCode code, T result) {
-        return new ApiResponse<>(true, code.getReasonHttpMethod().getCode(), code.getReasonHttpMethod().getMessage(), result);
+        return new ApiResponse<>(true, code.getReasonHttpStatus().getCode(), code.getReasonHttpStatus().getMessage(), result);
     }
 
     //실패한 경우 API 응답 생성

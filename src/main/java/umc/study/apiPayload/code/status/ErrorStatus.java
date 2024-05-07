@@ -22,7 +22,10 @@ public enum ErrorStatus implements BaseErrorCode {
     NICKNAME_NOT_EXITST(HttpStatus.BAD_REQUEST, "MEMBER4002", "닉네임은 필수 입니다."),
     
     //~관련 응답
-    ARTICLE_NOT_FOUND(HttpStatus.BAD_REQUEST, "ARTICLE4001", "게시글이 없습니다.");
+    ARTICLE_NOT_FOUND(HttpStatus.BAD_REQUEST, "ARTICLE4001", "게시글이 없습니다."),
+
+    //For test
+    TEMP_EXCEPTION(HttpStatus.BAD_REQUEST, "TEMP4001", "테스트용 예외 발생");
 
     private final HttpStatus httpStatus;
     private final String code;
