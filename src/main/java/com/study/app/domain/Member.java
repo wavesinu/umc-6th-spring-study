@@ -4,6 +4,7 @@ import com.study.app.domain.enums.Gender;
 import com.study.app.domain.enums.MemberStatus;
 import com.study.app.domain.common.BaseEntity;
 import com.study.app.domain.enums.SocialType;
+import com.study.app.domain.mapping.ChallengeMission;
 import com.study.app.domain.mapping.MemberAllowance;
 import com.study.app.domain.mapping.MemberFoodCategory;
 import jakarta.persistence.*;
@@ -65,8 +66,8 @@ public class Member extends BaseEntity {
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<MemberFoodCategory> memberFoodCategories = new ArrayList<>();
 
-//    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
-//    private List<ChallengeMission> challengeMissions = new ArrayList<>();
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
+    private List<ChallengeMission> challengeMissions = new ArrayList<>();
 
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<Review> reviews = new ArrayList<>();

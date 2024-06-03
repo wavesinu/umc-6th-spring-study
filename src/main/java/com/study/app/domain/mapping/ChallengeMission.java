@@ -13,26 +13,22 @@ import lombok.*;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 public class ChallengeMission extends BaseEntity {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Enumerated(EnumType.STRING)
-    @Column(columnDefinition = "VARCHAR(30) DEFAULT 'CHALLENGING'")
-    private MissionStatus missionStatus;
+//    @Column(columnDefinition = "VARCHAR(30) DEFAULT 'CHALLENGING'")
+    @Column(columnDefinition = "VARCHAR(30)")
+    private MissionStatus missionStatus = MissionStatus.CHALLENGING;
 
+    @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "member_id")
     private Member member;
 
+    @Setter
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "mission_id")
     private Mission mission;
-
-    public void setMember(Member member) {
-        this.member = member;
-    }
-
-    public void setMission(Mission mission) {
-        this.mission = mission;
-    }
 }

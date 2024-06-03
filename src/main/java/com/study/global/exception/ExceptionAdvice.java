@@ -1,5 +1,6 @@
-package umc.study.apiPayload.exception;
+package com.study.global.exception;
 
+import com.study.global.apiPayLoad.code.ErrorReasonDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
@@ -14,7 +15,6 @@ import org.springframework.web.context.request.ServletWebRequest;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 import umc.study.apiPayload.ApiResponse;
-import umc.study.apiPayload.code.ErrorReasonDTO;
 import umc.study.apiPayload.code.status.ErrorStatus;
 
 import java.util.LinkedHashMap;
